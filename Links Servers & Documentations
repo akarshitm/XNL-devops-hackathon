@@ -1,0 +1,13 @@
+Links to the respective applications
+
+Clone application running on 3 load balanced EKS clusters:-
+http://34.201.141.103:3000/
+
+Prometheus monitoring dashboard:-
+http://23.22.114.123:9090/
+Here go into status ---> targets ---> node_exporter/jenkins monitoring
+
+Grafana monitoring dashboard:-
+http://23.22.114.123:3000/
+Username: admin
+Password: Princeofperis@13
