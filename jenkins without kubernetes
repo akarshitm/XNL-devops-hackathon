@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/akarshit/Book-My-Show.git'
+                git branch: 'main', url: 'https://github.com/akarshitm/Book-My-Show.git'
                 sh 'ls -la'  // Verify files after checkout
             }
         }
@@ -69,10 +69,10 @@ pipeline {
                     withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
                         sh ''' 
                         echo "Building Docker image..."
-                        docker build --no-cache -t akarshit/bms:latest -f bookmyshow-app/Dockerfile bookmyshow-app
+                        docker build --no-cache -t akarshitm/bms:latest -f bookmyshow-app/Dockerfile bookmyshow-app
 
                         echo "Pushing Docker image to registry..."
-                        docker push akarshit/bms:latest
+                        docker push akarshitm/bms:latest
                         '''
                     }
                 }
@@ -86,7 +86,7 @@ pipeline {
                 docker rm bms || true
 
                 echo "Running new container on port 3000..."
-                docker run -d --restart=always --name bms -p 3000:3000 akarshit/bms:latest
+                docker run -d --restart=always --name bms -p 3000:3000 akarshitm/bms:latest
 
                 echo "Checking running containers..."
                 docker ps -a
