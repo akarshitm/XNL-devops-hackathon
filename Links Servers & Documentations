@@ -1,6 +1,6 @@
 Links to the respective applications
 
-Clone application running on 3 load balanced EKS clusters:-
+Clone application running on 3 load balanced EC2 instances in an EKS cluster:-
 http://34.201.141.103:3000/
 
 Prometheus monitoring dashboard:-
